@@ -1,6 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
+import Main from '../src/components/Main'
+import NavBar from '../src/components/NavBar'
+import Footer from '../src/components/Footer'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -11,24 +13,11 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <nav className={styles.nav}>
-                <div cLassName={styles.navList}>
-                    <Link href="/">Home</Link>
-                    &nbsp;
-                    <Link href="/list">List</Link>
-                </div>
-            </nav>
+            <NavBar />
 
-            <main className={styles.main}>
-                <h1 className={styles.title}>Hello</h1>
+            <Main />
 
-                <div className={styles.description}>
-                    This is expLoRa!
-                </div>
-            </main>
-
-            <footer className={styles.footer}>
-            </footer>
+            <Footer />
         </div>
     )
 }

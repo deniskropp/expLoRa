@@ -1,6 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-import { createServer } from 'http'
-import { parse } from 'url'
+import { IncomingMessage, ServerResponse, createServer } from 'http'
 import next from 'next'
 
 const dev = process.env.NODE_ENV !== 'production'
@@ -11,7 +9,7 @@ const app = next({ dev, hostname, port })
 const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
-    const server = createServer(async (req, res) => {
+    const server = createServer(async (req: IncomingMessage, res: ServerResponse) => {
         //console.log(req.url)
 
         try {

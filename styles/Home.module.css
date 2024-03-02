@@ -7,9 +7,18 @@
   align-items: center;
 }
 
-.navList {
+.nav {
   display: flex;
   flex-direction: row;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+}
+
+.navIcons {
+  background-color: #0070f3;
 }
 
 .title a {
