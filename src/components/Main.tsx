@@ -15,9 +15,14 @@ export default function Main() {
                 }
             }
 
-            const response = await axios.request(options)
+            try {
+                const response = await axios.request(options)
 
-            setList(response.data.list)
+                setList(response.data.list)
+            }
+            catch (error) {
+                console.error(error)
+            }
         }
 
         getList()
